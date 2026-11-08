@@ -58,4 +58,6 @@ print(f"I'm sorry karena dengan berat hati membatalkan undangan ini untukmu {frt
 print(name)
 print(f"Hallo {name[0]}, kamu masih aku undang yaa.")
 print(f"Hallo {name[1]}, kamu masih aku undang yaa.")
+
+
 print (len(name))
