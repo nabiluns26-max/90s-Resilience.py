@@ -4,7 +4,7 @@ class Restoran:
         self.jenis = jenis
         self.jumlah_tersaji = 0
     
-    def deskripsi_restoran():
+    def deskripsi_restoran(self):
         print (f"Restoran {self.nama} menyediakan {self.jenis}")
 
     def set_jumlah_tersaji(self, nomor):
@@ -14,18 +14,16 @@ class Restoran:
         self.jumlah_tersaji += tambahan
 
 class Kios_Es_Krim (Restoran):
-    def __init__(self, nama, jenis, rasa):
-        super().__init__(nama, rasa)
-        self.rasa = rasa
+    def __init__(self, nama, jenis, daftar_rasa):
+        super().__init__(nama, jenis)
+        self.daftar_rasa = daftar_rasa
 
-    def deskripsi_kios_es_krim(self):
-        print (f"Kios es krim ini menyediakan es krim dengan rasa : {self.rasa}")
+    def tampilkan_rasa(self):
+        print (f"Daftar rasa di : {self.nama}")
+        for rasa in self.daftar_rasa:
+            print(f"- {rasa}")
 
-rasa_1 = Kios_Es_Krim('Momoyo', 'es krim','Cokelat')
-rasa_2 = Kios_Es_Krim('Momoyo', 'es krim', 'Melon')
-rasa_3 = Kios_Es_Krim('Momoyo', 'es krim','Stroberi')
+kios = Kios_Es_Krim('Momoyo', 'es krim',['Cokelat', 'Tiramissu', 'Matcha'])
 
-for kios in (rasa_1, rasa_2, rasa_3):
-    kios.deskripsi_kios_es_krim()
-    print ()
-
+kios.deskripsi_restoran()
+kios.tampilkan_rasa()
