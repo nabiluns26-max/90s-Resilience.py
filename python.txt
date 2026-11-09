@@ -1,0 +1,5 @@
+Dalam Python, Aku dapat menyimpan data di dalam variabel.
+Dalam Python, Aku dapat membuat kelas dan objek untuk memodelkan benda nyata.
+Dalam Python, Aku dapat mengulang daftar dengan perulangan for.
+Dalam Python, Aku dapat memecah program menjadi beberapa modul dan mengimpornya.
+Dalam Python, Aku dapat membaca isi berkas teks dengan pathlib.
