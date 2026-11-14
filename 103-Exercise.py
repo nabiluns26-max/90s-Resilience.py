@@ -1,6 +1,6 @@
 from pathlib import Path 
 
-path = Path('Guest.txt')
+path = Path('makanan.txt')
 contents = path.read_text(encoding='utf-8')
 
 #lines = contents.splitlines()
