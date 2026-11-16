@@ -1,3 +1,4 @@
+# Soal csv exercise no 1
 import csv
 
 with open('nilaiKuliah.csv', 'r', encoding = 'utf-8-sig', newline = '') as file :
@@ -40,3 +41,43 @@ total_skor = sum(
 rata_rata = total_skor / len(data_mahasiswa)
 
 print(f"\nRata-rata kelas: {rata_rata:.2f}")
+
+# Soal csv exercise no 2
+ # Menghitung rata-rata skor
+
+total_skor = sum(
+    mahasiswa['SkorAkhir']
+    for mahasiswa in data_mahasiswa
+)
+
+rata_rata = total_skor / len(data_mahasiswa)
+
+print(f"\nRata-rata kelas: {rata_rata:.2f}")
+
+# Soal csv exercise no 3
+for mahasiswa in data_mahasiswa:
+    skor = mahasiswa['SkorAkhir']
+
+    if skor >= 85:
+        nilai_huruf = 'A'
+    elif skor >= 80:
+        nilai_huruf = 'A-'
+    elif skor >= 75:
+        nilai_huruf = 'B+'
+    elif skor >= 70:
+        nilai_huruf = 'B'
+    elif skor >= 65:
+        nilai_huruf = 'C+'
+    elif skor >= 60:
+        nilai_huruf = 'C'
+    elif skor>= 50:
+        nilai_huruf = 'D'
+    else:
+        nilai_huruf = 'E'
+    
+    mahasiswa['NilaiHuruf'] = nilai_huruf
+
+    print(
+        f"{mahasiswa['NAMA MHS']}: "
+        f"{skor:.2f} - {nilai_huruf}"
+    )
