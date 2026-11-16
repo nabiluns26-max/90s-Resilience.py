@@ -19,7 +19,7 @@ class Kios_Es_Krim (Restoran):
         self.daftar_rasa = daftar_rasa
 
     def tampilkan_rasa(self):
-        print (f"Daftar rasa di : {self.nama}")
+        print (f"Daftar rasa di :")
         for rasa in self.daftar_rasa:
             print(f"- {rasa}")
 
